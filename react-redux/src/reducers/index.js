@@ -5,7 +5,7 @@ const initialState = {
   dog: "https://images.dog.ceo/breeds/poodle-toy/n02113624_681.jpg",
 };
 
-export default titleReducer = (state = initialState, action) => {
+export const  titleReducer = (state = initialState, action) => {
   switch (action.type) {
     case "EDITING":
       return { ...state, editing: true };

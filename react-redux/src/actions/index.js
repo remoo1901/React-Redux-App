@@ -19,6 +19,6 @@ export const getDog = () => {
     axios
       .get("https://dog.ceo/api/breeds/image/random")
       .then((res) => dispatch({ type: "NEW_DOG", payload: res.data.message }))
-      .catch((err) => console.log(ERROR, err));
+      .catch((err) => console.log("ERROR", err));
   };
 };
