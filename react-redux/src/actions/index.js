@@ -9,7 +9,7 @@ export const setEditFalse = () => {
     dispatch({ type: "LOADING" });
     setTimeout(() => {
       dispatch({ type: "DONE_EDITING" });
-    }, 5000);
+    }, 7000);
   };
 };
 
@@ -18,7 +18,9 @@ export const getDog = () => {
     dispatch({ type: "LOADING" });
     axios
       .get("https://dog.ceo/api/breeds/image/random")
-      .then((res) => dispatch({ type: "NEW_DOG", payload: res.data.message }))
+      .then((res) => {
+        dispatch({ type: "NEW_DOG", payload: res.data.message });
+      })
       .catch((err) => console.log("ERROR", err));
   };
 };

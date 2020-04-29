@@ -1,5 +1,5 @@
 const initialState = {
-  title: "here's the title",
+  title: "Random Dogs Pictures",
   editing: false,
   loading: false,
   dog: "https://images.dog.ceo/breeds/poodle-toy/n02113624_681.jpg",
@@ -17,7 +17,7 @@ export const  titleReducer = (state = initialState, action) => {
       return { ...state, loading: true };
 
     case "NEW_DOG":
-      return { ...state, dog: action.payload };
+      return { ...state, loading: false, dog: action.payload };
 
     default:
       return state;
